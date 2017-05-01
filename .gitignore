@@ -1,0 +1,8 @@
+
+*pyc
+__pycache__/
+deploy/
+staging/
+.ipynb_checkpoints/
+src/blog/output/
+src/blog/cache/
