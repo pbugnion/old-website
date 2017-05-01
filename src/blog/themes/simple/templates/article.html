@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block head %}
+  {{ super() }}
+  {% for keyword in article.keywords %}
+    <meta name="keywords" contents="{{keyword}}" />
+  {% endfor %}
+
+  {% for description in article.description %}
+    <meta name="description" contents="{{description}}" />
+  {% endfor %}
+
+  {% for tag in article.tags %}
+    <meta name="tags" contents="{{tag}}" />
+  {% endfor %}
+
+{% endblock %}
+
+{% block content %}
+<div class="container article-container">
+<section id="content" class="body">
+  <header>
+  <div class="page-header">
+    <h1 class="article-entry-title">
+         {{ article.title }}
+    </h1>
+  </div>
+  </header>
+
+  <footer class="post-info">
+    <abbr class="published" title="{{ article.date.isoformat() }}">
+      {{ article.locale_date }}
+    </abbr>
+	{% if article.modified %}
+    <abbr class="modified" title="{{ article.modified.isoformat() }}">
+      {{ article.locale_modified }}
+    </abbr>
+	{% endif %}
+  </footer><!-- /.post-info -->
+
+  <div class="article-entry-content">
+    {{ article.content }}
+  </div><!-- /.entry-content -->
+  </div>
+
+</section>
+
+{% endblock %}

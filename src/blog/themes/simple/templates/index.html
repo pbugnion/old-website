@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block custom_styles %}
+<style>
+
+html {
+    height : 100%;
+    min-height : 100%;
+}
+
+body {
+    height : 100%;
+    min-height : 100%;
+    background : url("theme/img/body-bg.jpg") ;
+}
+
+</style>
+{% endblock %}
+
+{% block content %}
+{% block content_title %}
+{% endblock %}
+
+<section id="content">
+<div id="post-list-container">
+<div class="container content-container">
+<ol id="post-list">
+{% for article in articles_page.object_list %}
+        <li><article class="index-hentry">
+                <header> <h2 class="entry-title"><a href="../{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> </header>
+                <footer class="post-info">
+                    <abbr class="published" title="{{ article.date.isoformat() }}"> {{ article.locale_date }} </abbr>
+                </footer><!-- /.post-info -->
+                <div class="entry-content"> {{ article.summary }} </div><!-- /.entry-content -->
+        </article></li>
+{% endfor %}
+</ol><!-- /#posts-list -->
+</div>
+{% include 'pagination.html' %}
+</section><!-- /#content -->
+</div>
+{% endblock content %}

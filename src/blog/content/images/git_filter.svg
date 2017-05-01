@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="454.67288"
+   height="131.82262"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="git_filter.svg">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend"
+       style="overflow:visible">
+      <path
+         id="path3939"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <filter
+       inkscape:collect="always"
+       id="filter3839"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.97043326"
+         id="feGaussianBlur3841" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter3902"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.5758929"
+         id="feGaussianBlur3904" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter5360"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.55803571"
+         id="feGaussianBlur5362" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="195.65518"
+     inkscape:cy="37.928493"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1440"
+     inkscape:window-height="768"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-57.371465,-56.893004)">
+    <rect
+       style="fill:#ffb380;stroke:#000000;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter5360)"
+       id="rect5326"
+       width="56.42857"
+       height="32.857143"
+       x="254.14285"
+       y="127.36218"
+       transform="matrix(1.1986923,0,0,1,-60.102201,0)" />
+    <rect
+       style="fill:#000000;fill-opacity:0.11111109;stroke:#000000;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter3839)"
+       id="rect3825"
+       width="110.71429"
+       height="47.142857"
+       x="77.142853"
+       y="125.93362"
+       transform="matrix(1.1609159,0,0,1,-22.311115,0)" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:AppleGothic;-inkscape-font-specification:AppleGothic"
+       x="99.285721"
+       y="84.505035"
+       id="text2985"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2987"
+         x="99.285721"
+         y="84.505035"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:AppleGothic;-inkscape-font-specification:AppleGothic">Working</tspan><tspan
+         sodipodi:role="line"
+         x="99.285721"
+         y="104.50504"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:AppleGothic;-inkscape-font-specification:AppleGothic"
+         id="tspan2989">directory</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:AppleGothic;-inkscape-font-specification:AppleGothic"
+       x="279.17413"
+       y="85.897034"
+       id="text3039"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3041"
+         x="279.17413"
+         y="85.897034"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:AppleGothic;-inkscape-font-specification:AppleGothic">*.ipynb</tspan><tspan
+         sodipodi:role="line"
+         x="279.17413"
+         y="105.89703"
+         id="tspan3043"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:AppleGothic;-inkscape-font-specification:AppleGothic">filters</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:AppleGothic;-inkscape-font-specification:AppleGothic"
+       x="421.90839"
+       y="95.913033"
+       id="text3045"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3047"
+         x="421.90839"
+         y="95.913033"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:AppleGothic;-inkscape-font-specification:AppleGothic">Git</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:AppleGothic;-inkscape-font-specification:AppleGothic"
+       x="131.48947"
+       y="144.40105"
+       id="text3051"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3053"
+         x="131.48947"
+         y="144.40105">Notebook</tspan><tspan
+         sodipodi:role="line"
+         x="131.48947"
+         y="164.40105"
+         id="tspan3055">without outputs</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3845"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><flowRegion
+         id="flowRegion3847"><rect
+           id="rect3849"
+           width="78.571426"
+           height="47.142857"
+           x="250.71428"
+           y="132.36218" /></flowRegion><flowPara
+         id="flowPara3851">clean filter</flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="270.71429"
+       y="125.93361"
+       id="text3853"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3855"
+         x="270.71429"
+         y="125.93361"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:AppleGothic;-inkscape-font-specification:AppleGothic" /><tspan
+         sodipodi:role="line"
+         x="270.71429"
+         y="175.93361"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:AppleGothic;-inkscape-font-specification:AppleGothic"
+         id="tspan3857" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:AppleGothic;-inkscape-font-specification:AppleGothic"
+       x="432.04752"
+       y="144.40105"
+       id="text3894"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3896"
+         x="432.04752"
+         y="144.40105">Notebook</tspan><tspan
+         sodipodi:role="line"
+         x="432.04752"
+         y="164.40105"
+         id="tspan3898">without outputs</tspan></text>
+    <rect
+       style="fill:#000000;fill-opacity:0.11111109;stroke:#000000;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter3902)"
+       id="rect3900"
+       width="196.42857"
+       height="55.714287"
+       x="329.28574"
+       y="123.07648"
+       transform="matrix(0.68950193,0,0,0.87945766,138.09974,16.123286)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.9272303px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="m 364.08195,144.21932 -50.97125,0"
+       id="path4753"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.99818468;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3.9927389, 7.9854778;stroke-dashoffset:0"
+       id="rect5320"
+       width="156.13741"
+       height="128.7249"
+       x="57.857143"
+       y="59.505039" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.98845792;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3.95383174, 7.90766348;stroke-dashoffset:0.69192056"
+       id="rect5322"
+       width="97.642853"
+       height="128.09155"
+       x="231.64285"
+       y="58.790752" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.93835819;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3.75343252, 7.50686503;stroke-dashoffset:0.65685069"
+       id="rect5324"
+       width="157.74529"
+       height="129.69339"
+       x="353.8299"
+       y="57.362183" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:AppleGothic;-inkscape-font-specification:AppleGothic"
+       x="277.64285"
+       y="148.59943"
+       id="text5364"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5366"
+         x="277.64285"
+         y="148.59943">smudge</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path5387"
+       d="m 243.6773,144.21932 -46.15004,0"
+       style="fill:none;stroke:#000000;stroke-width:0.88228935px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)" />
+  </g>
+</svg>

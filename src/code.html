@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Pascal Bugnion - Code</title>
+
+    <meta name="description" content="Open source projects created or contributed to by Pascal.
+    These include 'scikit-monaco', an open source library for Monte Carlo integration in Python,
+    'contactpp', a library for generating pseudopotentials for the contact interaction, and
+    'bibscrape', a series of shell scripts for downloading bibtex citations from journal websites." />
+
+     <!-- Twitter Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <!-- Google analytics -->
+    <script src="google-analytics.js"></script>
+
+    <!-- Mathjax -->
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Customised stylesheets -->
+    <link href="main.css" rel="stylesheet">
+
+    <style>
+        #code-panels {
+            margin-top : 2em ;
+        }
+
+        #code-panels > ul > li > a {
+            font-size : 20px ;
+            color : black ;
+            padding-left : 20px;
+            padding-right : 20px ;
+        }
+
+        dl.code-listing {
+            margin-top : 1em ;
+        }
+
+        .code-listing dt {
+            clear : left ;
+            float : left ;
+            padding-right : 0.7em ;
+            margin-bottom : 0.5em ;
+        }
+
+        .code-listing dd {
+            float : left ;
+        }
+
+        .code-tabpane {
+            margin-top : 1.5em ;
+        }
+    </style>
+
+    <script>
+        $(function() {
+
+            /* Allow people to access tabs by appending '#tab-name' at the end
+               of the URL.
+               See answers to this on Stack Overflow:
+               http://stackoverflow.com/questions/12131273/twitter-bootstrap-tabs-url-doesnt-change*/
+
+            function showTabFromHash() {
+                hash = window.location.hash
+                if (hash !== "") {
+                    $('a[href="'+hash+'"]').tab('show') ;
+                } else {
+                    $('a[href="#home"]').tab('show') ;
+                }
+            }
+
+            showTabFromHash() ;
+            window.addEventListener('hashchange', showTabFromHash, false) ;
+
+            $('.nav-tabs a').click(function (e) {
+                $(this).tab('show');
+                window.location.hash = this.hash;
+            }) ;
+
+        }) ;
+    </script>
+
+  </head>
+
+  <body>
+
+  <div id="page-wrapper">
+
+    <div class="navbar navbar-fixed-top" role="navigation" id="top-navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Pascal Bugnion</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Code</a></li>
+            <li><a href="http://www.scala4datascience.com">Book</a></li>
+            <li><a href="blog/index.html">Blog</a></li>
+            <li><a href="contact.html">About</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container content-container">
+
+        <div id="code-panels">
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
+            <li role="presentation"><a href="#skmonaco" role="tab" data-toggle="tab">scikit-monaco</a></li>
+            <li role="presentation"><a href="#gmaps" role="tab" data-toggle="tab">gmaps</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id=home>
+                <h2>Code</h2>
+
+                <p> I maintain several open-source programs, mostly revolving
+                around science or maths. Hopefully some of this will be useful
+                to other people. See also my repository on <a
+                href="https://github.com/pbugnion">github</a>.</p>
+
+                <dl class="code-listing">
+                    <dt><a href="#skmonaco">Scikit-Monaco</a></dt><dd>Monte Carlo integration library for Python</dd>
+                    <dt><a href="#gmaps">gmaps</a></dt><dd>Google maps in the IPython notebook</dd>
+                </dl>
+
+            </div>
+
+            <div itemscope itemtype="http://schema.org/SoftwareApplication" role="tabpanel" class="tab-pane fade in code-tabpane" id="skmonaco">
+                <h2 itemprop="name">Scikit-Monaco</h2>
+                <p class=lead>Scikit-Monaco is a Monte Carlo integration library for Python.</p>
+                <p>A code snippet is worth a thousand words. Let's integrate \(\sqrt{x^2 + y^2 + z^2}\) in the unit cube:</p>
+
+<!-- HTML generated using hilite.me --><pre class="codesample"><span style="color: #333333">&gt;&gt;&gt;</span> <span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">skmonaco</span> <span style="color: #008800; font-weight: bold">import</span> mcquad
+<span style="color: #333333">&gt;&gt;&gt;</span> <span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">math</span> <span style="color: #008800; font-weight: bold">import</span> sqrt
+<span style="color: #333333">&gt;&gt;&gt;</span> result, error <span style="color: #333333">=</span> mcquad(
+<span style="color: #333333">...</span>     <span style="color: #008800; font-weight: bold">lambda</span> xs: sqrt(xs[<span style="color: #0000DD; font-weight: bold">0</span>]<span style="color: #333333">**</span><span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">+</span>xs[<span style="color: #0000DD; font-weight: bold">1</span>]<span style="color: #333333">**</span><span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">+</span>xs[<span style="color: #0000DD; font-weight: bold">2</span>]<span style="color: #333333">**</span><span style="color: #0000DD; font-weight: bold">2</span>),
+<span style="color: #333333">...</span>     npoints<span style="color: #333333">=</span><span style="color: #6600EE; font-weight: bold">1e6</span>, xl<span style="color: #333333">=</span>[<span style="color: #6600EE; font-weight: bold">0.</span>,<span style="color: #6600EE; font-weight: bold">0.</span>,<span style="color: #6600EE; font-weight: bold">0.</span>], xu<span style="color: #333333">=</span>[<span style="color: #6600EE; font-weight: bold">1.</span>,<span style="color: #6600EE; font-weight: bold">1.</span>,<span style="color: #6600EE; font-weight: bold">1.</span>])
+<span style="color: #333333">&gt;&gt;&gt;</span> <span style="color: #008800; font-weight: bold">print</span> <span style="background-color: #fff0f0">&quot;{} +/- {}&quot;</span><span style="color: #333333">.</span>format(result,error)
+<span style="color: #6600EE; font-weight: bold">0.960695982212</span> <span style="color: #333333">+/-</span> <span style="color: #6600EE; font-weight: bold">0.000277843266684</span>
+</pre>
+
+                <p>Monte Carlo integration is particularly suited to the
+                calculation of high dimensional integrals.  Scikit-Monaco is
+                written in Cython, aiming to offer quasi C-like speeds with the
+                flexibility of Python. The integration is automatically
+                distributed over several processes to take advantage of
+                multi-core processors.</p>
+
+                <p>The easiest way to download and install Scikit-Monaco is
+                with easy-install,
+                <pre class="codesample"> $ easy_install scikit-monaco </pre>
+                If you do not have root access, use the
+                <code>--prefix=/path/to/directory</code> option to install
+                scikit-monaco in a directory that you have access to, and add
+                the line
+                <pre class="codesample">export PYTHONPATH=$PYTHONPATH:path/to/directory</pre>
+                to your
+                <code>.bashrc</code> file.</p>
+
+
+                <div class=code-link-button-container>
+                    <a itemprop="url" role="button" class="btn btn-lg code-link-button" href="https://pypi.python.org/pypi/scikit-monaco/0.2.1">Homepage</a>
+                    <a role="button" class="btn btn-lg code-link-button" href="http://scikit-monaco.readthedocs.org/en/latest/">Documentation</a>
+                    <a itemprop="downloadUrl" role="button" class="btn btn-lg code-link-button" href="https://pypi.python.org/packages/source/s/scikit-monaco/scikit-monaco-0.2.1.tar.gz">Download</a>
+                </div>
+
+            </div> <!-- skmonaco -->
+
+            <div itemscope itemtype="http://schema.org/SoftwareApplication" role="tabpanel" class="tab-pane fade in code-tabpane" id="gmaps">
+                <h2 itemprop="name">gmaps</h2>
+                <p class=lead>Google maps in IPython notebooks</p>
+                <p>You have some latitude and longitude data in a Python list or a numpy array. You want to see where that data is. This plugin for the IPython notebook makes that easy.</p>
+
+                <img src="/img/gmaps_demo.png" width="100%" />
+
+                <div class=code-link-button-container>
+                    <a itemprop="url" role="button" class="btn btn-lg code-link-button" href="https://github.com/pbugnion/gmaps">Homepage</a>
+                </div>
+            </div> <!-- gmaps -->
+
+        </div> <!-- tabcontent -->
+    </div><!-- /.container -->
+
+
+  </div>
+  </body>
+</html>
