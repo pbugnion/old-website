@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Data diversions - Articles by Pascal Bugnion</title>
+        <meta charset="utf-8" />
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+         <!-- Twitter Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+
+        <!-- mathjax -->
+        <!-- Load mathjax -->
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    <!-- End of mathjax configuration -->
+
+        <!-- pygments -->
+        <style>
+        .highlight-ipynb .hll { background-color: #ffffcc }
+.highlight-ipynb  { background: #f8f8f8; }
+.highlight-ipynb .c { color: #408080; font-style: italic } /* Comment */
+.highlight-ipynb .err { border: 1px solid #FF0000 } /* Error */
+.highlight-ipynb .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight-ipynb .o { color: #666666 } /* Operator */
+.highlight-ipynb .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight-ipynb .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight-ipynb .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight-ipynb .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight-ipynb .gd { color: #A00000 } /* Generic.Deleted */
+.highlight-ipynb .ge { font-style: italic } /* Generic.Emph */
+.highlight-ipynb .gr { color: #FF0000 } /* Generic.Error */
+.highlight-ipynb .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight-ipynb .gi { color: #00A000 } /* Generic.Inserted */
+.highlight-ipynb .go { color: #888888 } /* Generic.Output */
+.highlight-ipynb .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight-ipynb .gs { font-weight: bold } /* Generic.Strong */
+.highlight-ipynb .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight-ipynb .gt { color: #0044DD } /* Generic.Traceback */
+.highlight-ipynb .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight-ipynb .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight-ipynb .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight-ipynb .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight-ipynb .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight-ipynb .kt { color: #B00040 } /* Keyword.Type */
+.highlight-ipynb .m { color: #666666 } /* Literal.Number */
+.highlight-ipynb .s { color: #BA2121 } /* Literal.String */
+.highlight-ipynb .na { color: #7D9029 } /* Name.Attribute */
+.highlight-ipynb .nb { color: #008000 } /* Name.Builtin */
+.highlight-ipynb .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight-ipynb .no { color: #880000 } /* Name.Constant */
+.highlight-ipynb .nd { color: #AA22FF } /* Name.Decorator */
+.highlight-ipynb .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight-ipynb .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight-ipynb .nf { color: #0000FF } /* Name.Function */
+.highlight-ipynb .nl { color: #A0A000 } /* Name.Label */
+.highlight-ipynb .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight-ipynb .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight-ipynb .nv { color: #19177C } /* Name.Variable */
+.highlight-ipynb .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight-ipynb .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight-ipynb .mf { color: #666666 } /* Literal.Number.Float */
+.highlight-ipynb .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight-ipynb .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight-ipynb .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight-ipynb .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight-ipynb .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight-ipynb .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight-ipynb .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight-ipynb .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight-ipynb .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight-ipynb .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight-ipynb .sx { color: #008000 } /* Literal.String.Other */
+.highlight-ipynb .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight-ipynb .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight-ipynb .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight-ipynb .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight-ipynb .vc { color: #19177C } /* Name.Variable.Class */
+.highlight-ipynb .vg { color: #19177C } /* Name.Variable.Global */
+.highlight-ipynb .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight-ipynb .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+        </style>
+
+        <!-- Customised stylesheets -->
+        <link href="http://pascalbugnion.net/main.css" rel="stylesheet">
+        <link href="theme/css/blog.css" rel="stylesheet">
+
+<style>
+
+html {
+    height : 100%;
+    min-height : 100%;
+}
+
+body {
+    height : 100%;
+    min-height : 100%;
+    background : url("theme/img/body-bg.jpg") ;
+}
+
+</style>
+
+
+</head>
+
+<body id="index" class="home">
+    <div class="navbar navbar-fixed-top" role="navigation" id="top-navbar">
+      <div class="container" id="navbar-container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://localhost:8000/index.html">Pascal Bugnion</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+              <li><a href="http://localhost:8000/code.html">Code</a></li>
+              <li class="active"><a href="http://localhost:8000/blog/index.html">Blog</a></li>
+              <li><a href="http://localhost:8000/contact.html">About</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+<h2>Articles by Pascal Bugnion</h2>
+
+<section id="content">
+<div id="post-list-container">
+<div class="container content-container">
+<ol id="post-list">
+        <li><article class="index-hentry">
+                <header> <h2 class="entry-title"><a href="http://localhost:8000/blog/ipython-notebooks-and-git.html" rel="bookmark" title="Permalink to IPython notebooks and git">IPython notebooks and git</a></h2> </header>
+                <footer class="post-info">
+                    <abbr class="published" title="2014-12-25T00:00:00+01:00"> Thu 25 December 2014 </abbr>
+                </footer><!-- /.post-info -->
+                <div class="entry-content"> 
+IPython notebooks are becoming increasingly popular, but they don't play well
+with version control. This post offers a customisable recipe for including
+IPython notebooks in git repositories in a sensible manner.
+ </div><!-- /.entry-content -->
+        </article></li>
+        <li><article class="index-hentry">
+                <header> <h2 class="entry-title"><a href="http://localhost:8000/blog/monte-carlo-integration.html" rel="bookmark" title="Permalink to Monte Carlo integration">Monte Carlo integration</a></h2> </header>
+                <footer class="post-info">
+                    <abbr class="published" title="2014-12-19T00:00:00+01:00"> Fri 19 December 2014 </abbr>
+                </footer><!-- /.post-info -->
+                <div class="entry-content"> 
+Monte Carlo integration is an extremely powerful method for evaluating high-dimensional integrals. It's a method that, I find, is not nearly as well known as it should be. This post is an attempt at fixing this.
+ </div><!-- /.entry-content -->
+        </article></li>
+</ol><!-- /#posts-list -->
+</div>
+</section><!-- /#content -->
+</div>
+</body>
+</html>
