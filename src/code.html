@@ -59,6 +59,11 @@
         .code-tabpane {
             margin-top : 1.5em ;
         }
+
+        img {
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
     </style>
 
     <script>
@@ -109,7 +114,7 @@
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Code</a></li>
-            <li class="active"><a href="talks.html">Talks</a></li>
+            <li><a href="talks.html">Talks</a></li>
             <li><a href="http://www.scala4datascience.com">Book</a></li>
             <li><a href="blog/index.html">Blog</a></li>
             <li><a href="contact.html">About</a></li>
@@ -123,70 +128,58 @@
         <div id="code-panels">
         <ul class="nav nav-tabs" role="tablist">
             <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
-            <li role="presentation"><a href="#skmonaco" role="tab" data-toggle="tab">scikit-monaco</a></li>
             <li role="presentation"><a href="#gmaps" role="tab" data-toggle="tab">gmaps</a></li>
+            <li role="presentation"><a href="#widgets" role="tab" data-toggle="tab">Jupyter widgets</a></li>
         </ul>
 
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane fade in active" id=home>
                 <h2>Code</h2>
 
-                <p> I maintain several open-source programs, mostly revolving
-                around science or maths. Hopefully some of this will be useful
+                <p> I work on several open-source libraries, mostly revolving
+                around data. Hopefully some of this will be useful
                 to other people. See also my repository on <a
                 href="https://github.com/pbugnion">github</a>.</p>
 
                 <dl class="code-listing">
-                    <dt><a href="#skmonaco">Scikit-Monaco</a></dt><dd>Monte Carlo integration library for Python</dd>
                     <dt><a href="#gmaps">gmaps</a></dt><dd>Google maps in the IPython notebook</dd>
+                    <dt><a href="#widgets">Jupyter widgets</a></dt><dd>Interactive data visualization in Jupyter notebooks</dd>
                 </dl>
-
             </div>
 
-            <div itemscope itemtype="http://schema.org/SoftwareApplication" role="tabpanel" class="tab-pane fade in code-tabpane" id="skmonaco">
-                <h2 itemprop="name">Scikit-Monaco</h2>
-                <p class=lead>Scikit-Monaco is a Monte Carlo integration library for Python.</p>
-                <p>A code snippet is worth a thousand words. Let's integrate \(\sqrt{x^2 + y^2 + z^2}\) in the unit cube:</p>
+            <div itemscope itemtype="http://schema.org/SoftwareApplication" role="tabpanel" class="tab-pane fade in code-tabpane" id="widgets">
+                <h2 itemprop="name">Jupyter widgets</h2>
+                <p class="lead">Interactive visualizations in Jupyter notebooks</p>
 
-<!-- HTML generated using hilite.me --><pre class="codesample"><span style="color: #333333">&gt;&gt;&gt;</span> <span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">skmonaco</span> <span style="color: #008800; font-weight: bold">import</span> mcquad
-<span style="color: #333333">&gt;&gt;&gt;</span> <span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">math</span> <span style="color: #008800; font-weight: bold">import</span> sqrt
-<span style="color: #333333">&gt;&gt;&gt;</span> result, error <span style="color: #333333">=</span> mcquad(
-<span style="color: #333333">...</span>     <span style="color: #008800; font-weight: bold">lambda</span> xs: sqrt(xs[<span style="color: #0000DD; font-weight: bold">0</span>]<span style="color: #333333">**</span><span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">+</span>xs[<span style="color: #0000DD; font-weight: bold">1</span>]<span style="color: #333333">**</span><span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">+</span>xs[<span style="color: #0000DD; font-weight: bold">2</span>]<span style="color: #333333">**</span><span style="color: #0000DD; font-weight: bold">2</span>),
-<span style="color: #333333">...</span>     npoints<span style="color: #333333">=</span><span style="color: #6600EE; font-weight: bold">1e6</span>, xl<span style="color: #333333">=</span>[<span style="color: #6600EE; font-weight: bold">0.</span>,<span style="color: #6600EE; font-weight: bold">0.</span>,<span style="color: #6600EE; font-weight: bold">0.</span>], xu<span style="color: #333333">=</span>[<span style="color: #6600EE; font-weight: bold">1.</span>,<span style="color: #6600EE; font-weight: bold">1.</span>,<span style="color: #6600EE; font-weight: bold">1.</span>])
-<span style="color: #333333">&gt;&gt;&gt;</span> <span style="color: #008800; font-weight: bold">print</span> <span style="background-color: #fff0f0">&quot;{} +/- {}&quot;</span><span style="color: #333333">.</span>format(result,error)
-<span style="color: #6600EE; font-weight: bold">0.960695982212</span> <span style="color: #333333">+/-</span> <span style="color: #6600EE; font-weight: bold">0.000277843266684</span>
-</pre>
+                <p>
+                    Jupyter widgets let you build interactive data
+                    visualizations and graphical user interfaces in Jupyter
+                    notebooks. Widgets can be inserted into a data processing
+                    pipeline to understand data flows. This lets the data
+                    scientist explore the data interactively, leading to a
+                    shorter feedback loop.
+                </p>
 
-                <p>Monte Carlo integration is particularly suited to the
-                calculation of high dimensional integrals.  Scikit-Monaco is
-                written in Cython, aiming to offer quasi C-like speeds with the
-                flexibility of Python. The integration is automatically
-                distributed over several processes to take advantage of
-                multi-core processors.</p>
+                <img src="img/wealth_of_nations.png" width="100%" />
 
-                <p>The easiest way to download and install Scikit-Monaco is
-                with easy-install,
-                <pre class="codesample"> $ easy_install scikit-monaco </pre>
-                If you do not have root access, use the
-                <code>--prefix=/path/to/directory</code> option to install
-                scikit-monaco in a directory that you have access to, and add
-                the line
-                <pre class="codesample">export PYTHONPATH=$PYTHONPATH:path/to/directory</pre>
-                to your
-                <code>.bashrc</code> file.</p>
-
+                <p>
+                    Jupyter widgets are an important part of the Jupyter ecosystem.
+                    They have been developed alongside Jupyter notebooks, with many
+                    of the same contributors.
+                </p>
+                <p>
+                    I started contributing regularly to the development effort in
+                    May 2017, and was granted commit rights in July of the same year.
+                </p>
 
                 <div class=code-link-button-container>
-                    <a itemprop="url" role="button" class="btn btn-lg code-link-button" href="https://pypi.python.org/pypi/scikit-monaco/0.2.1">Homepage</a>
-                    <a role="button" class="btn btn-lg code-link-button" href="http://scikit-monaco.readthedocs.org/en/latest/">Documentation</a>
-                    <a itemprop="downloadUrl" role="button" class="btn btn-lg code-link-button" href="https://pypi.python.org/packages/source/s/scikit-monaco/scikit-monaco-0.2.1.tar.gz">Download</a>
+                    <a itemprop="url" role="button" class="btn btn-lg code-link-button" href="https://ipywidgets.readthedocs.io/en/latest/">Documentation</a>
                 </div>
-
-            </div> <!-- skmonaco -->
+            </div>
 
             <div itemscope itemtype="http://schema.org/SoftwareApplication" role="tabpanel" class="tab-pane fade in code-tabpane" id="gmaps">
                 <h2 itemprop="name">gmaps</h2>
-                <p class=lead>Google maps in IPython notebooks</p>
+                <p class=lead>Google maps in Jupyter notebooks</p>
                 <p>You have some latitude and longitude data in a Python list or a numpy array. You want to see where that data is. This plugin for the IPython notebook makes that easy.</p>
 
                 <img src="/img/gmaps_demo.png" width="100%" />
