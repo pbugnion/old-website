@@ -2,7 +2,7 @@
 
 body {
     font-family : 'Josefin Sans', sans-serif ;
-    font-weight : 400 ;
+    font-weight : 300 ;
     padding-top : 60px ; /* Need this to get around fixed navbar */
 }
 
@@ -11,12 +11,12 @@ body {
 }
 
 h1 {
-    font-family : "Josefin Sans", sans-serif ;
-    font-weight : 600 ;
+    font-family : 'Josefin Sans', sans-serif ;
+    font-weight : 400 ;
 }
 
 h2 {
-    font-weight : 600 ;
+    font-weight : 400 ;
     padding-bottom : 0.3em ;
 }
 
@@ -75,7 +75,7 @@ code {
 
 #top-navbar .navbar-brand {
     font-size : 20px ;
-    font-weight : 600 ;
+    font-weight : 400 ;
     color : black ;
     padding-top : 12px ;
     padding-bottom : 10px ;
