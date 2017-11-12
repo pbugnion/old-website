@@ -22,7 +22,7 @@ help:
 test:
 	cd src/blog/ && $(MAKE) html
 	mkdir -p ${TEST_DIR}
-	cp src/*.js src/*.html src/*.css ${TEST_DIR}/
+	cp src/*.js src/*.html src/*.css src/*.ico ${TEST_DIR}/
 	cp -r src/img ${TEST_DIR}
 	cp -r src/blog/output/ ${TEST_DIR}/blog
 	mkdir -p ${TEST_DIR}/blog/nbs
@@ -40,7 +40,7 @@ watch-test:
 stage-deploy:
 	cd src/blog/ && $(MAKE) html CONFFILE=publishconf.py
 	mkdir -p ${STAGE_DIR}
-	cp src/*.js src/*.html src/*.css ${STAGE_DIR}/
+	cp src/*.js src/*.html src/*.css src/*.ico ${STAGE_DIR}/
 	cp -r src/img ${STAGE_DIR}/
 	cp -r src/blog/output/ ${STAGE_DIR}/blog
 	mkdir -p ${STAGE_DIR}/blog/nbs
