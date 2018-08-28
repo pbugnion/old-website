@@ -1,14 +1,17 @@
-Title: Adding Flow types to generators and coroutines
+Title: Flow types to generators and coroutines
 Date: 2018-08-28
 
 Since ECMAScript 6 introduced the `yield` keyword, coroutines have
 become more common. The best known example is probably the
 `async`/`await` framework for concurrency, but coroutines also form
-the backbone of redux-saga and have made their way into bluebird.
+the backbone of [redux-saga](https://redux-saga.js.org/) and have made
+their way into
+[bluebird](http://bluebirdjs.com/docs/getting-started.html).
 
-There seems to be little documentation on how to add Flow types to
-generators or coroutines. This post mitigates this by giving many
-different examples of typed generators. The code exampes are on
+There seems to be little documentation on how to add
+[Flow](https://flow.org/en/docs/) types to generators or
+coroutines. This post mitigates this by giving many different examples
+of typed generators. The code exampes are on
 [Github](https://github.com/pbugnion/flow-types-for-coroutines).
 
 ## Generators vs. coroutines
@@ -85,10 +88,11 @@ function* evens(): Generator<number, void, void> {
 ```
 
 In this example, we:
+
 - yield numbers
 - do not return anything
-- do not expect anything to be injected through yield (there is no
-  variable bound to the left of yield).
+- do not expect anything to be injected when we yield (there is no
+  variable bound to the left of `yield`).
 
 Thus, the type of our generator is `Generator<number, void,
 void>`. With generators, the `Next` type parameter is very often
@@ -99,7 +103,7 @@ Fibonacci sequence).
 Let's try something slightly more complex. We can create a generator that recursively
 walks a file tree:
 
-```
+```js
 import fs from 'fs'
 import path from 'path'
 
@@ -192,10 +196,10 @@ console.log(
 
 In programs built around generators, information is pulled by the
 consumers. In programs built around coroutines, information is pushed
-to the consumer. Let's create a pipeline that prints out the filenames
-in a given directory. We will wrap the asynchronous, callback-based
-functions in Node's `fs` module. The examples in this section are
-loosely based on the [Generators
+to the consumer. Let's create a pipeline that prints out the files in
+a given directory. We will wrap the asynchronous, callback-based
+functions in Node's [`fs`](https://nodejs.org/api/fs.html) module. The
+examples in this section are loosely based on the [Generators
 section](http://exploringjs.com/es6/ch_generators.html#sec_overview-generators)
 of *Exploring JavaScript*.
 
@@ -237,7 +241,8 @@ const pushFiles = function(
 ```
 
 Here, the target must be a `Generator<any, any, string>`: it must
-accept strings on the left-hand side of the yield statement.
+accept strings on the left-hand side of the yield statement. The target
+will include a statement like:
 
 ```js
 const file: string = yield
@@ -262,21 +267,19 @@ The type of our coroutine is `Generator<void, void, any>`:
 
 Somewhat annoyingly, we cannot use our `log` coroutine directly
 without initializing it because the coroutine needs to progress to the
-first yield:
+first yield. We need to write:
 
-```
+```js
 const logCoroutine = log()
 logCoroutine.next() // initialize coroutine
 
-pushFiles(
-  os.homedir(),
-  logCoroutine
-)
+// Read files in home directory and push them to logCoroutine
+pushFiles(os.homedir(), logCoroutine)
 ```
 
-To avoid this, it is common to write a helper function that creates
-the generator, initializes it by calling its `next` method and returns
-it:
+To reduce this boilerplate, it is common to write a helper function
+that creates the generator, initializes it by calling its `next`
+method and returns it:
 
 
 ```js
@@ -325,8 +328,11 @@ const log: () => Generator<void, void, any> = coroutine(function* () {
 })
 ```
 
-Thus, by moving the types to `log`, rather than directly on the argument of `coroutine`, we can use `log` in a type-safe way in the rest of our program. We now don't 
-have to initialize our coroutine to use it any more:
+Thus, by moving the types to `log`, rather than directly on the
+argument of `coroutine`, we can use `log` in a type-safe way in the
+rest of our program. 
+
+We now don't have to initialize our coroutine to use it any more:
 
 ```js
 pushFiles(os.homedir(), log())
@@ -351,7 +357,7 @@ const isFile: (Generator<any, any, string> => Generator<void, void, string>) =
   })
 ```
 
-Our function accepts as its target, any coroutine that accepts strings
+Our function accepts as its target any coroutine that accepts strings
 (since that is what it pushes out). Its return type is `Generator<void, void, string>`:
 
 - `Yield` is void since it does not yield anything
@@ -374,9 +380,9 @@ Flow is great. It catches a whole slew of errors that unit tests or
 manual QA will miss. It also makes the code much more readable to new
 users.
 
-Unfortunately, there are not very many good examples of how to express
-more complex types. If you struggle to add flow types to a construct,
-do write a blog post showing how you did it!
+Unfortunately, there are few good examples for more complex types. If
+you struggle to add flow types to a construct, do write it up so the
+community can benefit from it!
 
 ## More!
 
