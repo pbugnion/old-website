@@ -1,4 +1,4 @@
-Title: Flow types to generators and coroutines
+Title: Flow types for generators and coroutines
 Date: 2018-08-28
 
 Since ECMAScript 6 introduced the `yield` keyword, coroutines have
