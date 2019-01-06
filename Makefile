@@ -32,7 +32,7 @@ clean: clean-test
 	cd src/blog/ && $(MAKE) clean
 
 serve-test:
-	cd ${TEST_DIR} && python -m http.server
+	cd ${TEST_DIR} && python -m http.server --bind 127.0.0.1
 
 watch-test:
 	python watch_test.py
