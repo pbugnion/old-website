@@ -7,7 +7,7 @@ When we first started development in Scala, I had some misgivings about whether 
 
 We, as a team, have adopted a set of conventions that help us write programs that are less wrong and easier to understand. This is the first of a two-part series on these conventions. 
 
-In this post, we will focus on writing code that is less wrong. In the next post, we will describe some conventions that we have adopted to make our code more approachable.
+In this post, we will focus on writing code that is less wrong. In the [next post](/blog/scala-in-production-making-your-codebase-more-approachable.html), we describe some conventions that we have adopted to make our code more approachable.
 
 ## We need all the help we can get
 
@@ -141,3 +141,5 @@ object S3AccessService {
 ## Parting words
 
 These conventions have worked well for us because each mitigates a real pain that we felt before adopting it. They may well not apply to you. Finally, while having a clear set of conventions is useful, they result in incremental improvements. A good team is good because of the people and the team dynamics, not the tools they use or the conventions they adopt. 
+
+[Next post &#8608;](/blog/scala-in-production-making-your-codebase-more-approachable.html)
