@@ -47,7 +47,7 @@ stage-deploy:
 	cp -r src/blog/content/*ipynb ${STAGE_DIR}/blog/nbs
 
 deploy: stage-deploy
-	scp -r ${STAGE_DIR}/* ${HOSTNAME}:${HOST_DIR}
+	aws s3 sync ${STAGE_DIR}/ s3://pascalbugnion.net
 
 clean-test:
 	rm -rf ${TEST_DIR}
