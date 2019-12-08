@@ -1,27 +1,4 @@
 
-.landing-buttons {
-    padding-top : 20px ;
-}
-
-.landing-buttons .landing-button {
-    color: #333;
-    text-shadow: none; /* Prevent inheritence from `body` */
-    background-color: #fff;
-    border: 1px solid #fff;
-    border-radius : 5px ;
-    padding-left : 30px ;
-    padding-right : 30px ;
-}
-
-.landing-button + .landing-button {
-    margin-left: 50px ;
-}
-
-.landing-buttons .landing-button:hover {
-    background-color : #333 ;
-    color : #fff ;
-}
-
 #cover-heading {
   margin-top: 0;
   margin-bottom: 1.8em;
