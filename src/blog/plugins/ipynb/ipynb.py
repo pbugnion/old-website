@@ -4,8 +4,6 @@ import os
 import json
 import logging
 
-import markdown
-
 try:
     # Py3k
     from html.parser import HTMLParser
@@ -35,7 +33,6 @@ from pygments.formatters import HtmlFormatter
 
 
 logger = logging.getLogger(__name__)
-
 
 # Utility to strip HTML tags for summary creation
 class MLStripper(HTMLParser):
@@ -188,13 +185,14 @@ class IPythonNB(BaseReader):
         else:
             # Load metadata from ipython notebook file
             ipynb_file = open(filepath)
-            metadata = json.load(ipynb_file)['metadata']['pelican']
-            summary = open("content/summaries/"+metadata["Summary"]).read()
-            del metadata["Summary"]
+            raw_metadata = json.load(ipynb_file)['metadata']['pelican']
+            summary = open("content/summaries/"+raw_metadata["Summary"]).read()
+            del raw_metadata["Summary"]
+
+            metadata = {}
 
             # Fix metadata to pelican standards
-            for key, value in metadata.items():
-                del metadata[key]
+            for key, value in raw_metadata.items():
                 key = key.lower()
                 metadata[key] = self.process_metadata(key, value)
         metadata['ipython'] = True
