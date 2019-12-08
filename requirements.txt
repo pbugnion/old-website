@@ -2,3 +2,4 @@ pelican
 ipython
 nbconvert
 markdown
+livereload
