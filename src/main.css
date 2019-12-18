@@ -3,7 +3,6 @@
 body {
     font-family : 'Josefin Sans', sans-serif ;
     font-weight : 300 ;
-    padding-top : 60px ; /* Need this to get around fixed navbar */
 }
 
 .container {
@@ -25,6 +24,7 @@ h2 {
 }
 
 .content-container {
+    padding-top: 100px;
     font-size : 18px ;
     padding-bottom : 2em ;
 }
@@ -67,25 +67,28 @@ code {
 
 #top-navbar {
     font-size : 20px ;
-    padding-top : 10px ;
-    padding-bottom : 10px ;
     background-color : white ;
     box-shadow : 0px 3px 3px #aaa ;
+}
+
+#top-navbar .container {
+    padding: 0;
 }
 
 #top-navbar .navbar-brand {
     font-size : 20px ;
     font-weight : 400 ;
     color : black ;
-    padding-top : 12px ;
-    padding-bottom : 10px ;
+    padding-top : 8px ;
+    padding-bottom : 8px ;
+    padding-left: 15px;
+    padding-right: 15px;
     border-radius : 5px ;
-    height : inherit ; /* Cancel value from bootstrap-min */
     margin-right : 20px ;
 }
 
 
-#top-navbar .nav > li > a  {
+#top-navbar a.nav-link  {
     color : black ;
     border-radius : 5px ;
     margin-left : 10px ;
@@ -94,10 +97,10 @@ code {
     padding-bottom : 10px ;
 }
 
-#top-navbar .nav > li > a:hover,
-#top-navbar .nav > li > a:focus,
-#top-navbar .navbar-brand:hover,
-#top-navbar .navbar-brand:focus {
+#top-navbar a.nav-link:hover,
+#top-navbar a.nav-link:focus,
+#top-navbar a.navbar-brand:hover,
+#top-navbar a.navbar-brand:focus {
     color : white ;
     background-color : #222 ;
 
