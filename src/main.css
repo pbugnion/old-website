@@ -35,11 +35,6 @@ h2 {
     line-height : 125% ;
 }
 
-code {
-    font-size : 75% ;
-    color : #555 ;
-}
-
 .code-link-button + .code-link-button {
     margin-left : 50px ;
 }
