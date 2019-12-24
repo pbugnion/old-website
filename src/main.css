@@ -29,6 +29,10 @@ a {
     padding-bottom : 2em ;
 }
 
+.link-array a + a {
+    padding: 1rem;
+}
+
 /* Page headers */
 
 .page-header {
