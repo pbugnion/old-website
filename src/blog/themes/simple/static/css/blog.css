@@ -7,6 +7,10 @@
     font-family: 'EB Garamond', serif;
 }
 
+.blog-navbar-container {
+    max-width: 800px;
+}
+
 .article-entry-title {
     font-family: 'EB Garamond', serif;
 }
@@ -19,10 +23,6 @@
 #post-list {
     padding : 0 0 0 0 ;
     list-style-type : none ;
-}
-
-#navbar-article-container {
-    max-width : 900px ;
 }
 
 blockquote {
