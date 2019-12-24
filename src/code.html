@@ -9,9 +9,9 @@
     <title>Pascal Bugnion - Code</title>
 
     <meta name="description" content="Open source projects created or contributed to by Pascal.
-    These include 'scikit-monaco', an open source library for Monte Carlo integration in Python,
-    'contactpp', a library for generating pseudopotentials for the contact interaction, and
-    'bibscrape', a series of shell scripts for downloading bibtex citations from journal websites." />
+                These include 'scikit-monaco', an open source library for Monte Carlo integration in Python,
+                'contactpp', a library for generating pseudopotentials for the contact interaction, and
+                'bibscrape', a series of shell scripts for downloading bibtex citations from journal websites." />
 
     <!-- Twitter Bootstrap -->
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -43,6 +43,7 @@
        border: 1px solid #ccc;
        border-radius: 0;
        box-shadow: 0 3px 8px 0px #ccc;
+       margin-bottom: 30px;
      }
 
      .card-container .card-body {
@@ -71,18 +72,6 @@
        border-top: 1px solid #ccc;
        background: #fff;
        padding: 15px 20px 15px 20px;
-     }
-
-     @media (min-width: 768px) {
-       .card-columns {
-         column-count: 2;
-       }
-     }
-
-     @media (max-width: 768px) {
-       .card-columns {
-         column-count: 1;
-       }
      }
 
      .card-container .expand-button {
@@ -128,133 +117,139 @@
     </nav>
 
     <div class="container content-container">
-      <div class="card-columns">
+      <div class="row">
 
-        <div class="card card-container">
-          <div class="card-body">
-            <h2 class="heading">gmaps</h2>
-            <p class="lead">Google maps in Jupyter notebooks</p>
-            <img src="/img/gmaps_demo.png" width="100%" />
-            <div class="collapse" id="gmaps-collapse">
-              <p>
-                You have some latitude and longitude data in a Python list, a numpy array or a pandas dataframe. You want to see where that data is. This plugin for Jupyter makes that easy.
-              </p>
-              <p>
-                Visualize your data using heatmaps or symbols and overlay it with GeoJSON.
-              </p>
-              <div class="clearfix">
-                <a href="https://github.com/pbugnion/gmaps" class="float-left">GitHub</a><a href="https://jupyter-gmaps.readthedocs.io/" class="float-right">Documentation</a>
+        <div class="col-lg-6">
+
+          <div class="card card-container">
+            <div class="card-body">
+              <h2 class="heading">gmaps</h2>
+              <p class="lead">Google maps in Jupyter notebooks</p>
+              <img src="/img/gmaps_demo.png" width="100%" />
+              <div class="collapse" id="gmaps-collapse">
+                <p>
+                  You have some latitude and longitude data in a Python list, a numpy array or a pandas dataframe. You want to see where that data is. This plugin for Jupyter makes that easy.
+                </p>
+                <p>
+                  Visualize your data using heatmaps or symbols and overlay it with GeoJSON.
+                </p>
+                <div class="clearfix">
+                  <a href="https://github.com/pbugnion/gmaps" class="float-left">GitHub</a><a href="https://jupyter-gmaps.readthedocs.io/" class="float-right">Documentation</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="card-footer">
-            <a class="expand-button" href="#gmaps-collapse" role="button" data-toggle="collapse">Expand</a>
-          </div>
-        </div>
-
-        <div class="card card-container">
-          <div class="card-body">
-            <h2 class="heading">Dash Bootstrap components</h2>
-            <p class="lead">Responsive layouts and components for Plotly Dash</p>
-            <img src="/img/dbc.png" width="100%" />
-            <div class="collapse" id="dbc-collapse">
-              <p>
-                Dash Bootstrap components makes it easy to structure and build your <a href="https://dash.plot.ly/">Plotly Dash</a> applications by providing layouts and high-level components that wrap Twitter Bootstrap. It allows data scientists to build engaging, responsive dashboards without worrying about the details of CSS and styling.
-              </p>
-              <p>
-                I work on Dash Bootstrap components with <a href="https://tcbegley.com/">Tom Begley</a>.
-              </p>
-              <div class="clearfix">
-                <a href="https://github.com/facultyai/dash-bootstrap-components" class="float-left">GitHub</a><a href="https://dash-bootstrap-components.opensource.faculty.ai/" class="float-right">Documentation</a>
-              </div>
+            <div class="card-footer">
+              <a class="expand-button" href="#gmaps-collapse" role="button" data-toggle="collapse">Expand</a>
             </div>
           </div>
-          <div class="card-footer">
-            <a class="expand-button" href="#dbc-collapse" role="button" data-toggle="collapse">Expand</a>
-          </div>
-        </div>
 
-        <div class="card card-container">
-          <div class="card-body">
-            <h2 class="heading">Faculty platform</h2>
-            <p class="lead">A data science workbench for teams</p>
-            <img src="/img/faculty-platform.png" width="100%" />
-            <div class="collapse" id="faculty-platform-collapse">
-              <p>
-                <a href="https://faculty.ai/products-services/platform/">Faculty platform</a> aims to be the place in which data science is done for teams. By creating a shared execution environment in which data scientists can operate in, as well as a place to host models and keep track of experiments, it reduces the friction associated with the operation of a data science team.
-              </p>
-              <p>
-                It is typically deployed inside an organisation's infrastructure, allowing data scientists to access databases behind corporate firewalls.
-              </p>
-              <p>
-                Faculty platform is powered by open source tools, such as the <a href="https://jupyter.org/">Jupyter</a> ecosystem, <a href="https://mlflow.org/">MLFlow</a>, and <a href="https://plot.ly/dash/">Plotly Dash</a>.
-              </p>
-              <p>
-                Faculty Platform is developed by Faculty. I work predominantly on backend application code and the infrastructure layer. I also have technical lead and, occasionally, product ownership responsibilities. As the first engineer to work on the platform team, I have guided the growth and development of the platform since its inception.
-              </p>
-              <div class="clearfix">
-                <a href="https://faculty.ai/products-services/platform/" class="float-left">Website</a><a href="https://docs.faculty.ai/" class="float-right">Documentation</a>
+          <div class="card card-container">
+            <div class="card-body">
+              <h2 class="heading">Dash Bootstrap components</h2>
+              <p class="lead">Responsive layouts and components for Plotly Dash</p>
+              <img src="/img/dbc.png" width="100%" />
+              <div class="collapse" id="dbc-collapse">
+                <p>
+                  Dash Bootstrap components makes it easy to structure and build your <a href="https://dash.plot.ly/">Plotly Dash</a> applications by providing layouts and high-level components that wrap Twitter Bootstrap. It allows data scientists to build engaging, responsive dashboards without worrying about the details of CSS and styling.
+                </p>
+                <p>
+                  I work on Dash Bootstrap components with <a href="https://tcbegley.com/">Tom Begley</a>.
+                </p>
+                <div class="clearfix">
+                  <a href="https://github.com/facultyai/dash-bootstrap-components" class="float-left">GitHub</a><a href="https://dash-bootstrap-components.opensource.faculty.ai/" class="float-right">Documentation</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="card-footer">
-            <a class="expand-button" href="#faculty-platform-collapse" role="button" data-toggle="collapse">Expand</a>
-          </div>
-        </div>
-        <div class="card card-container">
-          <div class="card-body">
-            <h2 class="heading">Jupyter widgets</h2>
-            <p class="lead">Interactive visualizations in Jupyter notebooks</p>
-            <img src="img/wealth_of_nations.png" width="100%" />
-            <div class="collapse" id="jupyter-widgets-collapse">
-              <p>
-                Jupyter widgets let you build interactive data
-                visualizations and graphical user interfaces in Jupyter
-                notebooks. Widgets can be inserted into a data processing
-                pipeline to understand data flows. This lets the data
-                scientist explore the data interactively, leading to a
-                shorter feedback loop.
-              </p>
-              <p>
-                Jupyter widgets are an important part of the Jupyter ecosystem.
-                They have been developed alongside Jupyter notebooks, with many
-                of the same contributors.
-              </p>
-              <p>
-                I started contributing regularly to the development effort in
-                May 2017, and was granted commit rights in July of the same year.
-              </p>
-              <div class="clearfix">
-                <a href="https://github.com/jupyter-widgets/ipywidgets">GitHub</a><a href="https://ipywidgets.readthedocs.io/en/latest/" class="float-right">Documentation</a>
-              </div>
+            <div class="card-footer">
+              <a class="expand-button" href="#dbc-collapse" role="button" data-toggle="collapse">Expand</a>
             </div>
           </div>
-          <div class="card-footer">
-            <a class="expand-button" href="#jupyter-widgets-collapse" role="button" data-toggle="collapse">Expand</a>
-          </div>
-        </div>
 
-        <div class="card card-container">
-          <div class="card-body">
-            <h2 class="heading">jupyterlab-sql</h2>
-            <p class="lead">A SQL GUI in JupyterLab</p>
-            <div class="collapse" id="jupyterlab-sql-collapse">
-              <p>
-                jupyterlab-sql is a JupyterLab plugin that adds a GUI for viewing
-                SQL tables and interactively composing queries. It can be used
-                alongside a notebook or an editor for quickly iterating over
-                SQL queries.
-              </p>
-              <div class="clearfix">
-                <a href="https://github.com/pbugnion/jupyterlab-sql" class="float-left">GitHub</a>
+          <div class="card card-container">
+            <div class="card-body">
+              <h2 class="heading">jupyterlab-sql</h2>
+              <p class="lead">A SQL GUI in JupyterLab</p>
+              <div class="collapse" id="jupyterlab-sql-collapse">
+                <p>
+                  jupyterlab-sql is a JupyterLab plugin that adds a GUI for viewing
+                  SQL tables and interactively composing queries. It can be used
+                  alongside a notebook or an editor for quickly iterating over
+                  SQL queries.
+                </p>
+                <div class="clearfix">
+                  <a href="https://github.com/pbugnion/jupyterlab-sql" class="float-left">GitHub</a>
+                </div>
               </div>
             </div>
+            <div class="card-footer">
+              <a class="expand-button" href="#jupyterlab-sql-collapse" role="button" data-toggle="collapse">Expand</a>
+            </div>
           </div>
-          <div class="card-footer">
-            <a class="expand-button" href="#jupyterlab-sql-collapse" role="button" data-toggle="collapse">Expand</a>
-          </div>
+
         </div>
 
+        <div class="col-lg-6">
+          <div class="card card-container">
+            <div class="card-body">
+              <h2 class="heading">Faculty platform</h2>
+              <p class="lead">A data science workbench for teams</p>
+              <img src="/img/faculty-platform.png" width="100%" />
+              <div class="collapse" id="faculty-platform-collapse">
+                <p>
+                  <a href="https://faculty.ai/products-services/platform/">Faculty platform</a> aims to be the place in which data science is done for teams. By creating a shared execution environment in which data scientists can operate in, as well as a place to host models and keep track of experiments, it reduces the friction associated with the operation of a data science team.
+                </p>
+                <p>
+                  It is typically deployed inside an organisation's infrastructure, allowing data scientists to access databases behind corporate firewalls.
+                </p>
+                <p>
+                  Faculty platform is powered by open source tools, such as the <a href="https://jupyter.org/">Jupyter</a> ecosystem, <a href="https://mlflow.org/">MLFlow</a>, and <a href="https://plot.ly/dash/">Plotly Dash</a>.
+                </p>
+                <p>
+                  Faculty Platform is developed by Faculty. I work predominantly on backend application code and the infrastructure layer. I also have technical lead and, occasionally, product ownership responsibilities. As the first engineer to work on the platform team, I have guided the growth and development of the platform since its inception.
+                </p>
+                <div class="clearfix">
+                  <a href="https://faculty.ai/products-services/platform/" class="float-left">Website</a><a href="https://docs.faculty.ai/" class="float-right">Documentation</a>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a class="expand-button" href="#faculty-platform-collapse" role="button" data-toggle="collapse">Expand</a>
+            </div>
+          </div>
+          <div class="card card-container">
+            <div class="card-body">
+              <h2 class="heading">Jupyter widgets</h2>
+              <p class="lead">Interactive visualizations in Jupyter notebooks</p>
+              <img src="img/wealth_of_nations.png" width="100%" />
+              <div class="collapse" id="jupyter-widgets-collapse">
+                <p>
+                  Jupyter widgets let you build interactive data
+                  visualizations and graphical user interfaces in Jupyter
+                  notebooks. Widgets can be inserted into a data processing
+                  pipeline to understand data flows. This lets the data
+                  scientist explore the data interactively, leading to a
+                  shorter feedback loop.
+                </p>
+                <p>
+                  Jupyter widgets are an important part of the Jupyter ecosystem.
+                  They have been developed alongside Jupyter notebooks, with many
+                  of the same contributors.
+                </p>
+                <p>
+                  I started contributing regularly to the development effort in
+                  May 2017, and was granted commit rights in July of the same year.
+                </p>
+                <div class="clearfix">
+                  <a href="https://github.com/jupyter-widgets/ipywidgets">GitHub</a><a href="https://ipywidgets.readthedocs.io/en/latest/" class="float-right">Documentation</a>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a class="expand-button" href="#jupyter-widgets-collapse" role="button" data-toggle="collapse">Expand</a>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div><!-- /.container -->
 
