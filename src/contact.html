@@ -46,8 +46,10 @@
      }
 
      /* Disable the xl- part of boostrap */
-     .container {
-       max-width: 960px;
+     @media (min-width: 992px) {
+        .container {
+          max-width: 960px;
+        }
      }
     </style>
 
