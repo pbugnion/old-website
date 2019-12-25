@@ -51,10 +51,16 @@ a {
     font-size : 20px ;
     background-color : white ;
     box-shadow : 0px 3px 3px #aaa ;
+
+    /* Override base navbar padding so container controls size.
+       Only affects xs- screens. */
+    padding-left: 0px ;
+    padding-right: 0px;
 }
 
 #top-navbar .container {
-    padding: 0;
+    padding-left: 0; /* padding-left is absorbed in brand */
+    padding-right: 15px;
 }
 
 #top-navbar .navbar-brand {
