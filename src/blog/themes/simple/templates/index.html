@@ -2,31 +2,30 @@
 
 {% block custom_styles %}
 <style>
+ body {
+   height : 100%;
+   min-height : 100%;
+   background : url("theme/img/body-bg.jpg") ;
+ }
 
-html {
-    height : 100%;
-    min-height : 100%;
-}
+ .index-hentry {
+   clear: both;
+   background: #fff;
+   margin: 0 0 20px 0;
+   overflow: hidden;
+   padding: 20px 20px 5px 20px;
+   border: 1px solid #ccc;
+   box-shadow: 0px 3px 8px 0px #ccc;
+ }
 
-body {
-    height : 100%;
-    min-height : 100%;
-    background : url("theme/img/body-bg.jpg") ;
-}
+ .article-index-container {
+   padding-top: 90px;
+   max-width: 800px;
+ }
 
-.index-hentry {
-    clear: both;
-    background: #fff;
-    margin: 0 0 20px 0;
-    overflow: hidden;
-    padding: 20px 20px 5px 20px;
-    border: 1px solid #ccc;
-    box-shadow: 0px 3px 8px 0px #ccc;
-}
-
-.article-index-container {
-    padding-top: 90px;
-}
+ .entry-content {
+   font-size: 18px;
+ }
 </style>
 {% endblock %}
 

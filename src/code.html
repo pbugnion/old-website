@@ -9,9 +9,9 @@
     <title>Pascal Bugnion - Code</title>
 
     <meta name="description" content="Open source projects created or contributed to by Pascal.
-    These include 'scikit-monaco', an open source library for Monte Carlo integration in Python,
-    'contactpp', a library for generating pseudopotentials for the contact interaction, and
-    'bibscrape', a series of shell scripts for downloading bibtex citations from journal websites." />
+                These include 'scikit-monaco', an open source library for Monte Carlo integration in Python,
+                'contactpp', a library for generating pseudopotentials for the contact interaction, and
+                'bibscrape', a series of shell scripts for downloading bibtex citations from journal websites." />
 
     <!-- Twitter Bootstrap -->
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -32,69 +32,65 @@
     <link href="main.css" rel="stylesheet">
 
     <style>
-        #code-panels {
-            margin-top : 2em ;
-        }
+     body {
+       height : 100%;
+       min-height : 100%;
+       background : url("blog/theme/img/body-bg.jpg") ;
+     }
 
-        #code-panels > ul > li > a {
-            font-size : 20px ;
-            color : black ;
-            padding-left : 20px;
-            padding-right : 20px ;
-        }
+     .card-container {
+       background: #fff;
+       border: 1px solid #ccc;
+       border-radius: 0;
+       box-shadow: 0 3px 8px 0px #ccc;
+       margin-bottom: 30px;
+     }
 
-        dl.code-listing {
-            margin-top : 1em ;
-        }
+     .card-container .card-body {
+       padding-top: 20px;
+       padding-left: 25px;
+       padding-right: 25px;
+     }
 
-        .code-listing dt {
-            clear : left ;
-            float : left ;
-            padding-right : 0.7em ;
-            margin-bottom : 0.5em ;
-        }
+     .card-body .heading {
+       font-size: 24px;
+     }
 
-        .code-listing dd {
-            float : left ;
-        }
+     .card-body .lead {
+       font-size: 20px;
+     }
 
-        .code-tabpane {
-            margin-top : 1.5em ;
-        }
+     .card-body img {
+       margin-bottom: 16px;
+     }
 
-        img {
-            margin-top: 1em;
-            margin-bottom: 1em;
-        }
+     .card-container .card-footer {
+       border-top: 1px solid #ccc;
+       background: #fff;
+       padding: 15px 20px 15px 20px;
+     }
+
+     .card-container .expand-button {
+       color: black;
+       border-radius : 5px ;
+       padding: 10px;
+     }
+
+     .card-container .expand-button:hover {
+       color: white;
+       background-color: #222;
+       text-decoration: none;
+     }
     </style>
-
     <script>
-        $(function() {
-
-            /* Allow people to access tabs by appending '#tab-name' at the end
-               of the URL.
-               See answers to this on Stack Overflow:
-               http://stackoverflow.com/questions/12131273/twitter-bootstrap-tabs-url-doesnt-change*/
-
-            function showTabFromHash() {
-                hash = window.location.hash
-                if (hash !== "") {
-                    $('a[href="'+hash+'"]').tab('show') ;
-                } else {
-                    $('a[href="#home"]').tab('show') ;
-                }
-            }
-
-            showTabFromHash() ;
-            window.addEventListener('hashchange', showTabFromHash, false) ;
-
-            $('.nav-tabs a').click(function (e) {
-                $(this).tab('show');
-                window.location.hash = this.hash;
-            }) ;
-
-        }) ;
-   </script>
+     $(document).ready(function() {
+       $(".expand-button").click(function() {
+         $(this).text(function(_, oldValue) {
+           return oldValue == "Expand" ? "Collapse" : "Expand" ;
+         });
+       });
+     });
+    </script>
 
   </head>
 
@@ -116,86 +112,147 @@
     </nav>
 
     <div class="container content-container">
+      <div class="row">
 
-        <div id="code-panels">
-        <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="nav-item"><a class="nav-link" href="#home" role="tab" data-toggle="tab">Home</a></li>
-            <li role="presentation" class="nav-item"><a class="nav-link" href="#gmaps" role="tab" data-toggle="tab">gmaps</a></li>
-            <li role="presentation" class="nav-item"><a class="nav-link" href="#widgets" role="tab" data-toggle="tab">Jupyter widgets</a></li>
-            <li role="presentation" class="nav-item"><a class="nav-link" href="#dash-bootstrap-components" role="tab" data-toggle="tab">Dash Bootstrap components</a></li>
-        </ul>
+        <div class="col-lg-6">
 
-        <div class="tab-content">
-            <div role="tabpanel" class="tab-pane fade in active code-tabpane" id=home>
-                <h2>Code</h2>
-
-                <p> I work on several open-source libraries, mostly revolving
-                around data. Hopefully some of this will be useful
-                to other people. See also my repository on <a
-                href="https://github.com/pbugnion">github</a>.</p>
-
-                <dl class="code-listing">
-                    <dt><a href="#gmaps">gmaps</a></dt><dd>Google maps in the IPython notebook</dd>
-                    <dt><a href="#widgets">Jupyter widgets</a></dt><dd>Interactive data visualization in Jupyter notebooks</dd>
-                    <dt><a href="#dash-bootstrap-components">Dash Bootstrap components</a></dt><dd>Responsive layouts and components for Plotly Dash</dd>
-                </dl>
+          <div class="card card-container">
+            <div class="card-body">
+              <h2 class="heading">gmaps</h2>
+              <p class="lead">Google maps in Jupyter notebooks</p>
+              <img src="/img/gmaps_demo.png" width="100%" />
+              <div class="collapse" id="gmaps-collapse">
+                <p>
+                  You have some latitude and longitude data in a Python list, a numpy array or a pandas dataframe. You want to see where that data is. This plugin for Jupyter makes that easy.
+                </p>
+                <p>
+                  Visualize your data using heatmaps or symbols and overlay it with GeoJSON.
+                </p>
+                <p>
+                  gmaps has been downloaded over <a href="https://anaconda.org/conda-forge/gmaps">130,000 times</a> using conda alone. It has over 600 stars on GitHub.
+                </p>
+                <div class="link-array">
+                  <a href="https://github.com/pbugion/gmaps">GitHub</a>
+                  <a href="https://jupyter-gmaps.readthedocs.io">Documentation</a>
+                </div>
+              </div>
             </div>
-
-            <div itemscope itemtype="http://schema.org/SoftwareApplication" role="tabpanel" class="tab-pane fade in code-tabpane" id="widgets">
-                <h2 itemprop="name">Jupyter widgets</h2>
-                <p class="lead">Interactive visualizations in Jupyter notebooks</p>
-
-                <p>
-                    Jupyter widgets let you build interactive data
-                    visualizations and graphical user interfaces in Jupyter
-                    notebooks. Widgets can be inserted into a data processing
-                    pipeline to understand data flows. This lets the data
-                    scientist explore the data interactively, leading to a
-                    shorter feedback loop.
-                </p>
-
-                <img src="img/wealth_of_nations.png" width="100%" />
-
-                <p>
-                    Jupyter widgets are an important part of the Jupyter ecosystem.
-                    They have been developed alongside Jupyter notebook, with many
-                    of the same contributors.
-                </p>
-                <p>
-                    I started contributing regularly to the development effort in
-                    May 2017, and was granted commit rights in July of the same year.
-                </p>
-
-                <div class=code-link-button-container>
-                    <a itemprop="url" role="button" class="btn btn-lg code-link-button" href="https://ipywidgets.readthedocs.io/en/latest/">Documentation</a>
-                </div>
+            <div class="card-footer">
+              <a class="expand-button" href="#gmaps-collapse" role="button" data-toggle="collapse">Expand</a>
             </div>
+          </div>
 
-            <div itemscope itemtype="http://schema.org/SoftwareApplication" role="tabpanel" class="tab-pane fade in code-tabpane" id="gmaps">
-                <h2 itemprop="name">gmaps</h2>
-                <p class=lead>Google maps in Jupyter notebooks</p>
-                <p>You have some latitude and longitude data in a Python list or a numpy array. You want to see where that data is. This plugin for the IPython notebook makes that easy.</p>
-
-                <img src="/img/gmaps_demo.png" width="100%" />
-
-                <div class=code-link-button-container>
-                    <a itemprop="url" role="button" class="btn btn-lg code-link-button" href="https://github.com/pbugnion/gmaps">Homepage</a>
+          <div class="card card-container">
+            <div class="card-body">
+              <h2 class="heading">Dash Bootstrap components</h2>
+              <p class="lead">Responsive layouts and components for Plotly Dash</p>
+              <img src="/img/dbc.png" width="100%" />
+              <div class="collapse" id="dbc-collapse">
+                <p>
+                  Dash Bootstrap components makes it easy to structure and build your <a href="https://dash.plot.ly/">Plotly Dash</a> applications by providing layouts and high-level components that wrap Twitter Bootstrap. It allows data scientists to build engaging, responsive dashboards without worrying about the details of CSS and styling.
+                </p>
+                <p>
+                  I work on Dash Bootstrap components with <a href="https://tcbegley.com/">Tom Begley</a>.
+                </p>
+                <div class="link-array">
+                  <a href="https://github.com/facultyai/dash-bootstrap-components">GitHub</a>
+                  <a href="https://dash-bootstrap-components.opensource.faculty.ai/">Documentation</a>
                 </div>
-            </div> <!-- gmaps -->
+              </div>
+            </div>
+            <div class="card-footer">
+              <a class="expand-button" href="#dbc-collapse" role="button" data-toggle="collapse">Expand</a>
+            </div>
+          </div>
 
-            <div itemscope itemtype="http://schema.org/SoftwareApplication" role="tabpanel" class="tab-pane fade in code-tabpane" id="dash-bootstrap-components">
-                <h2 itemprop="name">Dash Bootstrap components</h2>
-                <p class=lead>Responsive layouts and components for Plotly Dash</p>
-                <p>Dash Bootstrap components makes it easy to structure and build your <a href="https://dash.plot.ly/">Plotly Dash</a> applications by providing layouts and high-level components.</p>
-
-                <img src="/img/dbc.png" width="100%" />
-
-                <div class=code-link-button-container>
-                  <a itemprop="url" role="button" class="btn btn-lg code-link-button" href="https://dash-bootstrap-components.opensource.asidatascience.com/">Documentation</a>
+          <div class="card card-container">
+            <div class="card-body">
+              <h2 class="heading">jupyterlab-sql</h2>
+              <p class="lead">A SQL GUI in JupyterLab</p>
+              <div class="collapse" id="jupyterlab-sql-collapse">
+                <p>
+                  jupyterlab-sql is a JupyterLab plugin that adds a GUI for viewing
+                  SQL tables and interactively composing queries. It can be used
+                  alongside a notebook or an editor for quickly iterating over
+                  SQL queries.
+                </p>
+                <div class="link-array">
+                  <a href="https://github.com/pbugnion/jupyterlab-sql">GitHub</a>
                 </div>
-            </div> <!-- gmaps -->
+              </div>
+            </div>
+            <div class="card-footer">
+              <a class="expand-button" href="#jupyterlab-sql-collapse" role="button" data-toggle="collapse">Expand</a>
+            </div>
+          </div>
 
-        </div> <!-- tabcontent -->
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card card-container">
+            <div class="card-body">
+              <h2 class="heading">Faculty platform</h2>
+              <p class="lead">A data science workbench for teams</p>
+              <img src="/img/faculty-platform.png" width="100%" />
+              <div class="collapse" id="faculty-platform-collapse">
+                <p>
+                  <a href="https://faculty.ai/products-services/platform/">Faculty platform</a> aims to be the place in which data science is done for teams. By creating a shared execution environment in which data scientists can operate in, as well as a place to host models and keep track of experiments, it reduces the friction associated with the operation of a data science team.
+                </p>
+                <p>
+                  It is typically deployed inside an organisation's infrastructure, allowing data scientists to access databases behind corporate firewalls.
+                </p>
+                <p>
+                  Faculty platform is powered by open source tools, such as the <a href="https://jupyter.org/">Jupyter</a> ecosystem, <a href="https://mlflow.org/">MLFlow</a>, and <a href="https://plot.ly/dash/">Plotly Dash</a>.
+                </p>
+                <p>
+                  Faculty Platform is developed by Faculty. I work predominantly on backend application code and the infrastructure layer. I also have technical lead and, occasionally, product ownership responsibilities. As the first engineer to work on the platform team, I have guided the growth and development of the platform since its inception.
+                </p>
+                <div class="link-array">
+                  <a href="https://faculty.ai/products-services/platform/">Website</a>
+                  <a href="https://docs.faculty.ai/">Documentation</a>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a class="expand-button" href="#faculty-platform-collapse" role="button" data-toggle="collapse">Expand</a>
+            </div>
+          </div>
+          <div class="card card-container">
+            <div class="card-body">
+              <h2 class="heading">Jupyter widgets</h2>
+              <p class="lead">Interactive visualizations in Jupyter notebooks</p>
+              <img src="img/wealth_of_nations.png" width="100%" />
+              <div class="collapse" id="jupyter-widgets-collapse">
+                <p>
+                  Jupyter widgets let you build interactive data
+                  visualizations and graphical user interfaces in Jupyter
+                  notebooks. Widgets can be inserted into a data processing
+                  pipeline to understand data flows. This lets the data
+                  scientist explore the data interactively, leading to a
+                  shorter feedback loop.
+                </p>
+                <p>
+                  Jupyter widgets are an important part of the Jupyter ecosystem.
+                  They have been developed alongside Jupyter notebooks, with many
+                  of the same contributors.
+                </p>
+                <p>
+                  I started contributing regularly to the development effort in
+                  May 2017, and was granted commit rights in July of the same year.
+                </p>
+                <div class="link-array">
+                  <a href="https://github.com/jupyter-widgets/ipywidgets">GitHub</a>
+                  <a href="https://ipywidgets.readthedocs.io/en/latest/">Documentation</a>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a class="expand-button" href="#jupyter-widgets-collapse" role="button" data-toggle="collapse">Expand</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div><!-- /.container -->
 
   </body>

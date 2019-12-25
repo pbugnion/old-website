@@ -30,25 +30,28 @@
     <style>
       .presentation-thumbnail {
         max-width: 100%;
-        margin-bottom: 20px;
         width: 100%;
       }
 
       .talk-row {
-        margin: 40px -15px 20px;
-        padding-bottom: 0px;
-        border-bottom: 1px solid #eee;
+        padding-top: 25px;
+        padding-bottom: 25px;
       }
+
+     .talk-row:not(:last-child) {
+        border-bottom: 1px solid #eee;
+     }
 
      .slide-title {
        padding-top: 0;
        margin-top: 0;
        font-size: 24px;
      }
-    </style>
 
-    <script>
-    </script>
+     .no-left-padding {
+       padding-left: 0 !important;
+     }
+    </style>
 
   </head>
 
@@ -75,11 +78,11 @@
         <h1>Slides and videos of talks</h1>
       </div>
 
-      <div class="row talk-row">
-        <div class="col-md-6">
+      <div class="row talk-row no-gutters">
+        <div class="d-none d-lg-block col-lg-5 pr-lg-3">
           <img src="img/talks-odsc-2018.png" class="presentation-thumbnail" alt="Add GUIs to data science workflows with Jupyter wigets"/>
         </div>
-        <div class="col-md-6">
+        <div class="col-lg-7 pl-lg-3">
           <h3 class="slide-title">Building Interactive Dashboards in Python: A Hands-on Introduction for Data Scientists</h3>
           <p><a href="https://odsc.com/london/">ODSC Europe</a>, September 2018</p>
           <p><a href="https://plot.ly/products/dash/">Plotly Dash</a> lets you build interactive dashboards in Python.</p>
@@ -90,66 +93,74 @@
             science process. In this talk, I demonstrate how to build
             a web application that wraps a trained model from scratch.
           </p>
-          <p><a href="https://github.com/pbugnion/tweets-sentiment-analysis-demo-app" target="_blank">Code</a></p>
-          <p><a href="https://www.slideshare.net/PascalBugnion/building-interactive-dashboards-with-python" target="_blank">Slides</a></p>
+          <div class="link-array">
+            <a href="https://github.com/pbugnion/tweets-sentiment-analysis-demo-app" target="_blank">Code</a>
+            <a href="https://www.slideshare.net/PascalBugnion/building-interactive-dashboards-with-python" target="_blank">Slides</a>
+          </div>
         </div>
       </div>
 
-      <div class="row talk-row">
-        <div class="col-md-6">
+      <div class="row talk-row no-gutters">
+        <div class="d-none d-lg-block col-lg-5 pr-lg-3">
           <a href="https://www.youtu.be/qAF-WCF_aSM">
             <img src="img/talks-strata-2018.png" class="presentation-thumbnail" alt="Add GUIs to data science workflows with Jupyter wigets"/>
           </a>
         </div>
-        <div class="col-md-6">
+        <div class="col-lg-7 pl-lg-3">
           <h3 class="slide-title">Jupyter widgets for human in the loop data science</h3>
           <p><a href="https://conferences.oreilly.com/strata/strata-eu">Strata London</a>, May 2018</p>
           <p>You can use <a href="https://ipywidgets.readthedocs.io/en/latest/">Jupyter widgets</a> to build user interfaces for controlling data science pipelines.</p>
 	  <p>In this talk, I show how widgets can be used to enhance your data science workflow by allowing you to concentrate on visualizations and abstrations rather than the minutiae of translating your thoughts into code. I talk through several widgets that we use every day at <a href="https://www.asidatascience.com">ASI Data Science</a>.</p>
-          <p><a href="https://www.slideshare.net/PascalBugnion/jupyter-widgets-for-human-in-the-loop-data-science" target="_blank">Slides</a></p>
+          <div class="link-array">
+            <a href="https://www.slideshare.net/PascalBugnion/jupyter-widgets-for-human-in-the-loop-data-science" target="_blank">Slides</a>
+          </div>
         </div>
       </div>
 
-      <div class="row talk-row">
-        <div class="col-md-6">
+      <div class="row talk-row no-gutters">
+        <div class="d-none d-lg-block col-lg-5 pr-lg-3">
           <a href="https://www.youtu.be/qAF-WCF_aSM">
             <img src="img/talks-pycon-2017.png" class="presentation-thumbnail" alt="Add GUIs to data science workflows with Jupyter wigets"/>
           </a>
         </div>
-        <div class="col-md-6">
+        <div class="col-lg-7 pl-lg-3">
           <h3 class="slide-title">Add GUIs to data science workflows with Jupyter widgets</h3>
           <p><a href="http://2017.pyconuk.org/">Pycon UK</a>, October 2017</p>
           <p>You can use <a href="https://ipywidgets.readthedocs.io/en/latest/">Jupyter widgets</a> to build user interfaces for controlling data science pipelines. In this talk, I build a widget to interactively label a training set and retrain a model.</p>
-          <p><a href="https://www.youtube.com/watch?v=qAF-WCF_aSM">Video</a></p>
-          <p><a href="https://github.com/pbugnion/jupyter-widgets-for-data-science-guis">Code</a></p>
+          <div class="link-array">
+            <a href="https://www.youtube.com/watch?v=qAF-WCF_aSM">Video</a>
+            <a href="https://github.com/pbugnion/jupyter-widgets-for-data-science-guis">Code</a>
+          </div>
         </div>
       </div>
 
-      <div class="row talk-row">
-        <div class="col-md-6">
+      <div class="row talk-row no-gutters">
+        <div class="d-none d-lg-block col-lg-5 pr-lg-3">
           <a href="http://scala-plotly-client-example.com.s3-website-eu-west-1.amazonaws.com/#/1">
             <img src="img/talks-plotcon.png" class="presentation-thumbnail" alt="Become one of the cool kids on Github"/>
           </a>
         </div>
-        <div class="col-md-6">
+        <div class="col-lg-7 pl-lg-3">
           <h3 class="slide-title">Become one of the cool kids on Github</h3>
           <p><a href="https://plotcon.plot.ly">Plotcon Oakland</a>, May 2017</p>
           <p>
             Why do some repositories grow popular while others remain relatively unknown? I try to achieve a quantitative understanding of the drivers of popularity in open source.
           </p>
-          <p><a href="https://www.youtube.com/watch?v=Q3Pg1NFCNwQ&t=1s">Video</a></p>
-          <p><a href="http://scala-plotly-client-example.com.s3-website-eu-west-1.amazonaws.com/#/1">Slides</a></p>
+          <div class="link-array">
+            <a href="https://www.youtube.com/watch?v=Q3Pg1NFCNwQ&t=1s">Video</a>
+            <a href="http://scala-plotly-client-example.com.s3-website-eu-west-1.amazonaws.com/#/1">Slides</a>
+          </div>
         </div>
       </div>
 
 
-      <div class="row">
-        <div class="col-md-6">
+      <div class="row talk-row no-gutters">
+        <div class="d-none d-lg-block col-lg-5 pr-lg-3">
           <a href="https://www.youtube.com/watch?v=buGcwOWyRLo">
             <img src="img/talks-scala4humans.png" class="presentation-thumbnail"/>
           </a>
         </div>
-        <div class="col-md-6">
+        <div class="col-lg-7 pl-lg-3">
           <h3 class="slide-title">Scala in production</h3>
           <p><a href="https://www.meetup.com/Scala-Central/">Scala Central</a>, January 2017</p>
           <p>
