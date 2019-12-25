@@ -79,10 +79,11 @@ a {
 #top-navbar a.nav-link  {
     color : black ;
     border-radius : 5px ;
-    margin-left : 10px ;
-    margin-right : 10px ;
     padding-top : 12px ;
     padding-bottom : 10px ;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 10px;
 }
 
 #top-navbar a.nav-link:hover,
