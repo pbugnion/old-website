@@ -9,8 +9,10 @@
 
     <meta name="description" content="Contact details and general biographical information for Pascal Bugnion." />
 
-     <!-- Twitter Bootstrap -->
+    <!-- Twitter Bootstrap -->
     <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Need popper.js for bootstrap tooltips -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
@@ -60,11 +62,17 @@
 
      /* Disable the xl- part of boostrap */
      @media (min-width: 992px) {
-        .container {
-          max-width: 960px;
-        }
+       .container {
+         max-width: 960px;
+       }
      }
     </style>
+
+    <script>
+     $(function () {
+       $('[data-toggle="tooltip"]').tooltip()
+     })
+    </script>
 
   </head>
 
@@ -114,18 +122,18 @@
         <div class="row contact-links-row">
           <div class="col-md-7 col-lg-8">
                 <!-- Icons downloaded from: https://www.iconfinder.com/icons/287725/github_icon#size=128 -->
-            <p class="contact-row"><span class="contact-key"><img src="img/1414849266_mail-128.png" height=36 width=36 alt="email"/></span><span class="contact-value"><script type="text/javascript">
+            <p class="contact-row"><span class="contact-key"><img src="img/1414849266_mail-128.png" height=36 width=36 alt="email" data-toggle="tooltip" title="Email"/></span><span class="contact-value" data-toggle="tooltip" title="Email"><script type="text/javascript">
 // rot13 rotated text
 document.write("<n uers=\"znvygb:cnfpny@ohtavba.bet\">cnfpny@ohtavba.bet</n>".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
 </script></span>
 
             </p>
-            <p class="contact-row"><span class="contact-key"><img src="img/1419562184_linkedin-128.png" height=36 width=36 alt="github"/></span><a href="https://uk.linkedin.com/in/pbugnion">pbugnion</a></p>
-            <p class="contact-row"><span class="contact-key"><img src="img/1414849458_github-128.png" height=36 width=36 alt="github"/></span><a href="https://github.com/pbugnion">pbugnion</a></p>
+            <p class="contact-row"><span class="contact-key"><img src="img/1419562184_linkedin-128.png" height=36 width=36 alt="LinkedIn" data-toggle="tooltip" title="LinkedIn" /></span><a href="https://uk.linkedin.com/in/pbugnion" data-toggle="tooltip" title="LinkedIn">pbugnion</a></p>
+            <p class="contact-row"><span class="contact-key"><img src="img/1414849458_github-128.png" height=36 width=36 alt="GitHub" data-toggle="tooltip" title="GitHub" /></span><a href="https://github.com/pbugnion" data-toggle="tooltip" title="GitHub">pbugnion</a></p>
           </div>
           <div class="col-md-5 col-lg-3">
-            <p class="contact-row"><span class="contact-key"><img src="img/twitter.png" height=36 width=36 alt="twitter"/></span><a href="https://twitter.com/pascalbugnion">@pascalbugnion</a></p>
-            <p class="contact-row"><span class="contact-key"><img src="img/stackoverflow.png" height=36 width=36 alt="stackoverflow"/></span><a href="https://stackoverflow.com/users/827862/pascal-bugnion">pascal-bugnion</a></p>
+            <p class="contact-row"><span class="contact-key"><img src="img/twitter.png" height=36 width=36 alt="Twitter" data-toggle="tooltip" title="Twitter" /></span><a href="https://twitter.com/pascalbugnion" data-toggle="tooltip" title="Twitter">@pascalbugnion</a></p>
+            <p class="contact-row"><span class="contact-key"><img src="img/stackoverflow.png" height=36 width=36 alt="stackoverflow" data-toggle="tooltip" title="Stack Overflow" /></span><a href="https://stackoverflow.com/users/827862/pascal-bugnion" data-toggle="tooltip" title="Stack Overflow">pascal-bugnion</a></p>
           </div>
         </div>
 
