@@ -59,8 +59,7 @@ a {
 }
 
 #top-navbar .container {
-    padding-left: 0; /* padding-left is absorbed in brand */
-    padding-right: 0; /* pradding-right is absorbed in toggler */
+    padding: 0;
 }
 
 #top-navbar .navbar-brand {
