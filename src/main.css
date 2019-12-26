@@ -54,8 +54,8 @@ a {
 
     /* Override base navbar padding so container controls size.
        Only affects xs- screens. */
-    padding-left: 0px ;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 #top-navbar .container {
