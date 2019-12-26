@@ -60,7 +60,7 @@ a {
 
 #top-navbar .container {
     padding-left: 0; /* padding-left is absorbed in brand */
-    padding-right: 15px;
+    padding-right: 0; /* pradding-right is absorbed in toggler */
 }
 
 #top-navbar .navbar-brand {
@@ -93,4 +93,20 @@ a {
     color : white ;
     background-color : #222 ;
 
+}
+
+#top-navbar .navbar-toggler {
+    border: 0;
+}
+
+#top-navbar .navbar-toggler:hover {
+    background-color: black;
+}
+
+#top-navbar .navbar-toggler:focus {
+    outline: none;
+}
+
+#top-navbar .navbar-toggler:hover .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
