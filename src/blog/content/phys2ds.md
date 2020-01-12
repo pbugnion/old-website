@@ -5,7 +5,7 @@ You're finishing a PhD in physics, engineering or another quantitative subject, 
 
 The transition to data science can be daunting. If you are finishing a PhD in a quantitative subject, you have a solid mathematical and logical grounding, but there is still a lot you need to learn to be an effective data scientist. This two-part blog post provides a (very opinionated) laundry list of skills that you might want to work on, both to prepare for interviews and when you are starting your new job.
 
-To convince you that what I'm saying is somewhat credible, here's my story. I finished a PhD in computational physics in Cambridge about 18 months ago. I then took part in a "bootcamp" to facilitate the transition from science to data science called [the ASI](http://theasi.co). I then joined what was at the time a small data science consultancy called [SCL Elections](http://scl.cc) as a data architect. As part of my job at SCL, I interviewed at least twenty data science and data engineering candidates, so I have experience on both sides of the table.
+To convince you that what I'm saying is somewhat credible, here's my story. I finished a PhD in computational physics in Cambridge about 18 months ago. I then took part in a "bootcamp" to facilitate the transition from science to data science called [the ASI fellowship](http://theasi.co). I then joined another small data science consultancy as a data architect before moving back to the ASI. As part of my job, I interviewed at least twenty data science and data engineering candidates, so I have experience on both sides of the table.
 
 ## The easy route
 
@@ -23,7 +23,7 @@ So you've done a PhD in a quantitative subject. It's likely you've at least dabb
 
 There is no real incentive to code well in academia. Jake VanderPlas describes the problem perfectly in two [blog](http://jakevdp.github.io/blog/2013/10/26/big-data-brain-drain/) [posts](https://jakevdp.github.io/blog/2014/08/22/hacking-academia/), which are well-worth reading.
 
-Coding in industry is different. If you're writing a code snippet, maybe your colleagues can benefit from using it as well. Suddenly, writing code that can be re-used by other people in your company becomes a really good use of your time (this is one of the reasons I love the real world). I can't speak for every company, but certainly at SCL, contributing to the company code base to make your colleagues more productive is very highly regarded.
+Coding in industry is different. If you're writing a code snippet, maybe your colleagues can benefit from using it as well. Suddenly, writing code that can be re-used by other people in your company becomes a really good use of your time (this is one of the reasons I love the real world). I can't speak for every company, but certainly from my experience, contributing to the company code base to make your colleagues more productive is very highly regarded.
 
 ## Python
 
