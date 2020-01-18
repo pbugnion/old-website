@@ -2,7 +2,7 @@ Title: Editor hacking: how I learnt to stop worrying and love my emacs configura
 Date: 2020-01-05
 Summary: Spending time mastering your text editor and customizing it to fit your needs is time well spent. It can reduce sources of friction in your workflow and generally increase your enjoyment of programming.
 
-I'll start with a confession: I can't do nothing. I am filled with an insatiable need to be doing *something*, to feel like I'm moving in some direction. 
+I'll start with a confession: I can't really sit still. I am filled with an insatiable need to be doing *something*, to feel like I'm moving in some direction. 
 
 When this need drives me to my desk on a Saturday, I have to choose what to do. I can work on something sensible, like one of my [open source projects](/code.html). Or I can indulge in one of my guilty pleasures, such as customising my text editor. So while normal people sometimes feel guilty about playing computer games, or drinking or having too much chocolate or skipping the gym, I feel guilty about migrating from Mac Mail to managing email in Emacs.
 
@@ -30,4 +30,4 @@ This is where editor customisation comes in: by spending time tweaking your vim,
 
 So spend time making your editor be the best it can be for you. If you spend an hour creating an Emacs hook that makes the system clock appear on your status bar when the window is maximized, that's an hour you will never get back. It will never be compensated by the time that you save by not using the mouse to make the time appear. But if it can save you a tiny papercut and keep you in a state of flow, that is time well spent.
 
-All the time I have spent mastering using and customizing Emacs means less friction in my workflow. I then enjoy programming more. Sure, it's time I won't get back. But it's what drives me back to my desk on Saturday mornings.
+All the time I have spent mastering using and customizing Emacs means less friction in my workflow. I then enjoy programming more. Sure, it's time I won't get back. But it's what draws me back to my desk on Saturday mornings.
