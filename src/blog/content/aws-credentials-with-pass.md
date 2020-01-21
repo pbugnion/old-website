@@ -91,6 +91,10 @@ My prompt now contains information about the profile:
 
 <div class="highlight"><pre><span class="k">[my-profile]</span> ~ $</pre></div>
 
+<img width="100%"
+  style="display:block;margin-top:1em;margin-bottom:1em;"
+  src="images/aws-vault-1.jpg" />
+
 ## A comparison with AWS vault
 
 Several of my colleagues use [aws-vault](https://github.com/99designs/aws-vault). *aws-vault* stores credentials in pass or in some other secret backend. However, instead of injecting the credentials directly into the shell environment, it generates *temporary* credentials using the [session token mechanism](https://docs.aws.amazon.com/cli/latest/reference/sts/get-session-token.html). It then opens a new subshell with those credentials in the environment. Effectively, you have an AWS access key and secret key in your environment, but these are only valid for an hour.
