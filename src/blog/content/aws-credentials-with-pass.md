@@ -105,4 +105,6 @@ There are two downsides:
 
 This is not to say that I don't think aws-vault is a great tool. In fact, at Faculty, we recommend it to new joiners as a way to manage credentials. It just isn't the right fit for me right now but that may, of course, change in the future.
 
-TODO conclusion
+## Parting words
+
+Using pass and a little bit of shell scripting, we can store AWS credentials (or any secret used as an environment variable) in an encrypted form.
