@@ -1,5 +1,5 @@
 title: Managing multiple AWS credentials with pass
-date: 2020-01-20
+date: 2020-01-21
 
 A significant part of my day job at [Faculty](https://faculty.ai/) involves the administration of cloud resources, predominantly on AWS.
 
