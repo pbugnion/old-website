@@ -4,18 +4,18 @@ date: 2020-01-20
 A significant part of my day job at [Faculty](https://faculty.ai/) involves the administration of cloud resources, predominantly on AWS.
 
 We have many AWS accounts: for development, for isolating
-parts of our infrastructure for specific customers or for business
+parts of our infrastructure for specific customers or business
 lines etc. We also have restricted access to some of our
 customers' accounts. A lot of my life is therefore spent switching
 between different AWS credentials across different accounts.
 
-I therefore want to impose some order on the complex world of my AWS profiles. In particular, I want a system that:
+I want to impose some order on the complex world of my AWS profiles. In particular, I want a system that:
 
 - Clearly shows what credentials I am currently using. Many of our development accounts are set to mirror our production infrastructure. I often have to run `make clean` in a development account. Running the same command against production infrastructure would be less fun.
-- Stores credentials in an encrypted manner. The threat model here is my accidentally running a malicious program that sends the contents of my `~/.aws` directory to some remote server.
+- Stores credentials in an encrypted manner. The threat model here is accidentally running a malicious program that sends the contents of my `~/.aws` directory to some remote server.
 - Allows switching and deactivating profiles easily.
 - I really understand. I have enough trouble managing infrastructure. I don't want to introduce another layer of complexity to manage credentials.
-- Ideally uses [pass](https://www.passwordstore.org/) to store credentials. I have been using pass to store all my passwords since time immemorial. Some of my worst nightmares revolve around losing the encryption key that it uses to store credentials. So I want to use pass to store my credentials.
+- Uses [pass](https://www.passwordstore.org/) to store credentials. I have been using pass to store all my passwords since time immemorial. Some of my worst nightmares revolve around losing the key that it uses to decrypt credentials.
 
 I spent a bit of time looking at existing solutions, in particular at [aws-vault](https://github.com/99designs/aws-vault), but eventually decided on just writing custom tooling myself. I talk about why *aws-vault* wasn't quite the right fit for me in the last section.
 
@@ -66,7 +66,7 @@ With these functions defined, I can run `aws-activate my-profile` to inject the 
 
 ## Profile visibility
 
-I need clear visibility over which AWS account I am currently running commands against. I live in constant terror of running a destructive command [against a production environment instead of a development one](https://about.gitlab.com/blog/2017/02/10/postmortem-of-database-outage-of-january-31/).
+I need to know which AWS account I am currently running commands against. I live in constant terror of running a destructive command [against a production environment instead of a development one](https://about.gitlab.com/blog/2017/02/10/postmortem-of-database-outage-of-january-31/).
 
 I therefore include the current value of the `AWS_PROFILE` variable in my prompt. For fish users, this looks like having the following lines in [`fish_prompt.fish`](https://fishshell.com/docs/current/commands.html#fish_prompt):
 
@@ -97,9 +97,9 @@ My prompt now contains information about the profile:
 
 ## A comparison with AWS vault
 
-Several of my colleagues use [aws-vault](https://github.com/99designs/aws-vault). *aws-vault* stores credentials in pass or in some other secret backend. However, instead of injecting the credentials directly into the shell environment, it generates *temporary* credentials using the [session token mechanism](https://docs.aws.amazon.com/cli/latest/reference/sts/get-session-token.html). It then opens a new subshell with those credentials in the environment. Effectively, you have an AWS access key and secret key in your environment, but these are only valid for an hour.
+Several of my colleagues use [aws-vault](https://github.com/99designs/aws-vault). *aws-vault* stores credentials in pass or in some other secret backend. However, instead of injecting the credentials directly into the shell environment, it generates *temporary* credentials using the [session token mechanism](https://docs.aws.amazon.com/cli/latest/reference/sts/get-session-token.html). It then opens a new shell with those credentials in the environment. Effectively, you have an AWS access key and secret key in your environment, but these are only valid for an hour.
 
-The main advantage of this is that if you run a malicious command that steals your credentials, the attacker has at most an hour to take advantage of them.
+The main advantage of this is that if you run a malicious command that steals environment variables, the attacker has at most an hour to take advantage of them.
 
 There are two downsides:
 
