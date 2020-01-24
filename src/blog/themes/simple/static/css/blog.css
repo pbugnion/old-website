@@ -40,6 +40,10 @@
     font-size: 75%;
 }
 
+.article-entry-content h2 {
+    padding-top: 0.4em;
+}
+
 /* Ipython notebook */
 
 .code_cell .input_prompt {
