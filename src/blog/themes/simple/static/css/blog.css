@@ -19,13 +19,13 @@
     margin-top : 1em ;
 }
 
-blockquote {
+.article-entry-content blockquote {
     border-left: 4px solid #eee;
     padding-left: 2em;
     font-size: 0.9em;
 }
 
-pre {
+.article-entry-content pre {
     padding: 9.5px;
     margin: 0 0 10px;
     font-size: 13px;
@@ -35,7 +35,7 @@ pre {
     border-radius: 4px;
 }
 
-code {
+.article-entry-content code {
     color: #555;
     font-size: 75%;
 }
