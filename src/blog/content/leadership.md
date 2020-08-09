@@ -1,5 +1,5 @@
 title: Making yourself useful as a middle manager
-date: 2020-08-04
+date: 2020-08-09
 
 The rise of knowledge workers has brought about a [shift in how decisions are made in organisations](https://hbr.org/2011/12/first-lets-fire-all-the-managers). Instead of a pyramidal structure culminating in a god-king, decisions are pushed to the edge of the organisation. This makes sense because individual contributors are better placed to make the majority of the decisions that power an organisation. 
 
