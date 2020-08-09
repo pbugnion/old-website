@@ -5,7 +5,7 @@ The rise of knowledge workers has brought about a [shift in how decisions are ma
 
 This shift in decision-making from management to individual contributors leads to the following question: if most of the decision-making is pushed to the individuals doing the work, what value do you, a team lead, bring?
 
-The team lead's nominal role is to empower and guide her team to maximize the value it can deliver to the organisation. In my experience, successful team leads fulfill this role through the following three activities:
+The team lead's nominal role is to empower and guide her team to maximise the value it can deliver to the organisation. In my experience, successful team leads fulfil this role through the following three activities:
 
 - they are a role model
 - they make sure everyone on the team knows how their role fits into the organisation
@@ -24,7 +24,7 @@ With this caveat out of the way, let's get back to understanding how team leader
 
 Someone in a team lead position will typically act as role model for team members. It is in people's nature to seek role models, and someone who has been elevated by the organisation, however weak the hierarchy, will be a natural target.
 
-Sociological research suggests leaders have the potential to [elicit pro-social behaviour in their followers](https://www.sciencedirect.com/science/article/pii/S0167268118302063). This is a double-edged sword: you will find that people also [emulate behaviours you would rather they did not](https://www.sciencedirect.com/science/article/abs/pii/S1053535708001157). You should be cogniscent of this and use it to build a high-performing team. 
+Sociological research suggests leaders have the potential to [elicit pro-social behaviour in their followers](https://www.sciencedirect.com/science/article/pii/S0167268118302063). This is a double-edged sword: you will find that people also [emulate behaviours you would rather they did not](https://www.sciencedirect.com/science/article/abs/pii/S1053535708001157). You should be cognisant of this and use it to build a high-performing team. 
 
 How you role model will depend on the values your organisation holds, but broadly, you should behave as you want your team members to behave: show accountability and ownership for the work of the team, pass on credit but shoulder blame, empower your team members, encourage discussions and seek consensus, promote rational discourse.
 
@@ -38,7 +38,7 @@ You want team members to leverage their knowledge to take decisions that are in 
 
 This contrasts with the traditional image of managers taking decisions and workers executing: where possible, you want to give team members the right context and let them make the decisions.
 
-What if you aren't sure of the company vision, or how your team helps deliver it? Often, you will have a general idea, but there will be outstanding questions that are unclear. Company strategies are imperfect documents and often out-of-date, specially if the company is changing rapidly. You and your team will oten be best placed to make those clarifications, since you are closest to the ground. Work with your team to create a proposal for clarification and seek feedback from the leadership.
+What if you aren't sure of the company vision, or how your team helps deliver it? Often, you will have a general idea, but there will be outstanding questions that are unclear. Company strategies are imperfect documents and often out-of-date, specially if the company is changing rapidly. You and your team will often be best placed to make those clarifications, since you are closest to the ground. Work with your team to create a proposal for clarification and seek feedback from the leadership.
 
 You are also responsible for communicating the team's needs to the rest of the company. Is the team working on too many different projects, resulting in too many context switches? Does the team need help finding user research participants? As a team lead, you will often have more voice within the company than your team members. Use this to magnify their voice. Besides communicating the needs of the team, you should also communicate successes and make sure the team, or individuals within the team get the credit that they deserve.
 
