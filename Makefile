@@ -46,8 +46,10 @@ stage-deploy:
 	mkdir -p ${STAGE_DIR}/blog/nbs
 	cp -r src/blog/content/*ipynb ${STAGE_DIR}/blog/nbs
 
-deploy: stage-deploy
+push:
 	aws s3 sync ${STAGE_DIR}/ s3://pascalbugnion.net
+
+deploy: stage-deploy push
 
 clean-test:
 	rm -rf ${TEST_DIR}
